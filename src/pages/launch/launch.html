@@ -1,0 +1,16 @@
+
+<ion-content>
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slider">
+      <img [src]="slide.image" />
+    
+      <ion-list  id="landingList1">
+        <ion-img id="olamlogo" src="https://techcrunch.com/wp-content/uploads/2018/07/logo-2.png?w=300"></ion-img>
+        <ion-list style="margin-top: 50%;">
+        <ion-label class="olamInfoText" text-wrap>{{slide.Description}}</ion-label>
+        <button ion-button full round large class="startbutton" color="primary" (click)="goToLogin()">Get Started</button>
+      </ion-list>    
+    </ion-list>
+    </ion-slide>
+  </ion-slides> 
+</ion-content>

@@ -1,0 +1,21 @@
+
+
+<ion-content class="iContent">   
+  <!-- registerForm: id for this form  which helps to use it to disable the buttons until all required input fields are filled out!-->
+    <form  #registerForm="ngForm" (ngSubmit)="checkAndLogin()">
+        <ion-list class="div1">
+          <ion-img id="olamlogo" src="https://techcrunch.com/wp-content/uploads/2018/07/logo-2.png?w=300"></ion-img>
+         
+          <ion-list id="loginDiv">
+            <ion-input margin-top class="emailPasswordInput" type="email" name="email" placeholder="Email" [(ngModel)]="registerCredentials.email" required round></ion-input>
+            <ion-input margin-top class="emailPasswordInput" type="password" name="password" placeholder="Password" [(ngModel)]="registerCredentials.password" required round></ion-input>
+            <a class="forgotPassword" color="forgot" (click)="forgotPassword()"><b>Forgot Password?</b></a>
+            <button ion-button margin-top round full large class="signinButton" color="primary" [disabled]="!registerForm.form.valid"  type="submit">Login</button>
+            <ion-label style="text-align: center"><b>Or</b></ion-label>
+            <button ion-button  round full large class="signinButton" color="secondary"  (click)="goToDashboard()">Sign Up</button>
+          </ion-list>
+
+      </ion-list>
+    </form>
+    </ion-content>
+    

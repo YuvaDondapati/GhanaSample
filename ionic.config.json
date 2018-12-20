@@ -1,0 +1,7 @@
+{
+  "name": "OlamGhana",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
